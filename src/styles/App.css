@@ -1,1 +1,20 @@
 
+.tooltip-wrapper {
+    position: relative;
+    width: fit-content;
+}
+.tooltiptext{
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+.tooltip{
+    cursor: pointer;
+    margin: 40px 0;
+}
