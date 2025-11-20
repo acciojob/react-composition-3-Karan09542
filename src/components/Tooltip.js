@@ -2,6 +2,7 @@ import React, { Children } from "react";
 
 const Tooltip = ({ tooltiptext, children }) => {
   const [showTooltip, setShowTooltip] = React.useState(false);
+  console.log(children)
   return React.cloneElement(
     children,
     {

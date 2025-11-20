@@ -7,11 +7,11 @@ const App = () => {
   return (
     <div>
         {/* Do not remove the main div */}
-        <Tooltip tooltiptext={"Thank you"}>
+        <Tooltip tooltiptext={"This is a tooltip"}>
           <h2 className="tooltip">Hover over me</h2>
         </Tooltip>
-        <Tooltip tooltiptext={"Thank you again"}>
-          <p className="tooltip">Hover over me once more</p>
+        <Tooltip tooltiptext={"This is another tooltip"}>
+          <p className="tooltip">Hover over me to see another tooltip</p>
         </Tooltip>
     </div>
   )
