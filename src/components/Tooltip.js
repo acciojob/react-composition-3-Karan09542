@@ -10,7 +10,7 @@ const Tooltip = ({ tooltiptext, children }) => {
     },
     <>
       {children.props.children}
-      { showTooltip && <div className="tooltiptext">{tooltiptext}</div>}
+      { showTooltip && <div className="tooltiptext">{tooltiptext}</div> }
     </>
   );
 };
