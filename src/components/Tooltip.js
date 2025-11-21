@@ -1,18 +1,21 @@
-import React, { Children } from "react";
+import React from "react";
 
 const Tooltip = ({ tooltiptext, children }) => {
   const [showTooltip, setShowTooltip] = React.useState(false);
-  console.log(children)
-  return React.cloneElement(
-    children,
-    {
-      onMouseEnter: () => setShowTooltip(true),
-      onMouseLeave: () => setShowTooltip(false),
-    },
-    <>
-      {children.props.children}
-      <div className={showTooltip ? "tooltiptext" : "hidden"}>{tooltiptext}</div>
-    </>
+  return (
+    <div
+      onMouseEnter={() => setShowTooltip(true)}
+      onMouseLeave={() => setShowTooltip(false)}
+    >
+      {React.cloneElement(
+        children,
+        {},
+        <>
+          {children.props.children}
+          {showTooltip && <div className="tooltiptext">{tooltiptext}</div>}
+        </>
+      )}
+    </div>
   );
 };
 
